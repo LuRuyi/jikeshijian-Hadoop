@@ -27,8 +27,8 @@ public class FlowBeanDriver {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(FlowBean.class);
         //6.设置数据的输入和输出路径
-        FileInputFormat.setInputPaths(job, new Path("mapreduce/input.txt"));
-        FileOutputFormat.setOutputPath(job, new Path("mapreduce/output"));
+        FileInputFormat.setInputPaths(job, new Path("input/"));
+        FileOutputFormat.setOutputPath(job, new Path("output/"));
         //7.提交job
         boolean result = job.waitForCompletion(true);
         System.exit(result ? 0 : 1);
