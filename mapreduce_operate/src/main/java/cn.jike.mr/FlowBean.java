@@ -1,4 +1,4 @@
-package com.geek.bigdata.mapreduce;
+package cn.jike.mr;
 
 import org.apache.hadoop.io.Writable;
 
@@ -6,13 +6,13 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-//定义实现writable接口
+//bean一定要实现writable接口
 public class FlowBean implements Writable {
     private long upFlow;
     private long downFlow;
     private long sumFlow;
 
-    //空参构造
+    //一定要有一个无参构造
     public FlowBean() {
     }
 
@@ -55,6 +55,10 @@ public class FlowBean implements Writable {
 
     @Override
     public String toString() {
-        return upFlow + "\t" + downFlow + "\t" + sumFlow;
+        return "FlowBean{" +
+                "upFlow=" + upFlow +
+                ", downFlow=" + downFlow +
+                ", sumFlow=" + sumFlow +
+                '}';
     }
 }

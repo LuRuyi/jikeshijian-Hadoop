@@ -6,7 +6,11 @@
 
     <groupId>com.geek.bigdata</groupId>
     <artifactId>Hadoop</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>mapreduce_operate</module>
+    </modules>
     <repositories>
         <repository>
             <id>apache</id>
