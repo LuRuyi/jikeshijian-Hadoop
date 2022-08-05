@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>mapreduce_operate</module>
+        <module>hbase_operate</module>
     </modules>
     <repositories>
         <repository>

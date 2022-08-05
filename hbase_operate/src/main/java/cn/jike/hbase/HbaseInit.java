@@ -1,4 +1,4 @@
-package com.geek.bigdata.hbase;
+package cn.jike.hbase;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;

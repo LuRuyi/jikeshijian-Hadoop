@@ -1,4 +1,4 @@
-package com.geek.bigdata.hbase;
+package cn.jike.hbase;
 
 import org.apache.hadoop.hbase.HColumnDescriptor;
 import org.apache.hadoop.hbase.HTableDescriptor;
