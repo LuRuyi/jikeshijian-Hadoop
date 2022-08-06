@@ -1,4 +1,4 @@
-CREATE TABLE `t_user`(
+CREATE EXTERNAL TABLE `t_user`(
   `userid` int,
   `sex` string,
   `age` int,

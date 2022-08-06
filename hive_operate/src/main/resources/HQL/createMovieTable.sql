@@ -1,4 +1,4 @@
-CREATE TABLE `t_movie`(
+CREATE EXTERNAL TABLE `t_movie`(
   `movieid` bigint,
   `moviename` string,
   `movietype` string)
