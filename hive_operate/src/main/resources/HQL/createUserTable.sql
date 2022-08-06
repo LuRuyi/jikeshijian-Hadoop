@@ -1,11 +1,11 @@
-CREATE TABLE `t_user_rhea`(
+CREATE TABLE `t_user`(
   `userid` int,
   `sex` string,
   `age` int,
-  `occupation` int,
-  `zipcode` string)
+  `occupation` string,
+  `zipcode` bigint)
 ROW FORMAT SERDE
-  'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
+  'org.apache.hadoop.hive.contrib.serde2.MultiDelimitSerDe'
 WITH SERDEPROPERTIES (
   'field.delim'='::',
   'serialization.format'='::')
@@ -14,4 +14,4 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT
   'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
 LOCATION
-  '/data/hive/users.dat';
+  '/rhea/hive/data/user';

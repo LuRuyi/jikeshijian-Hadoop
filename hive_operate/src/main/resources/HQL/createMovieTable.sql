@@ -1,9 +1,9 @@
-CREATE TABLE `t_movie_rhea`(
-  `movieid` int,
+CREATE TABLE `t_movie`(
+  `movieid` bigint,
   `moviename` string,
   `movietype` string)
 ROW FORMAT SERDE
-  'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
+  'org.apache.hadoop.hive.contrib.serde2.MultiDelimitSerDe'
 WITH SERDEPROPERTIES (
   'field.delim'='::',
   'serialization.format'='::')
@@ -12,4 +12,4 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT
   'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
 LOCATION
-  '/data/hive/movies.dat';
+  '/rhea/hive/data/movie';

@@ -1,8 +1,8 @@
-CREATE EXTERNAL TABLE `t_rating_rhea`(
+CREATE EXTERNAL TABLE `t_rating`(
   `userid` int,
-  `movieid` int,
+  `movieid` bigint,
   `rate` int,
-  `times` bigint)
+  `times` string)
 ROW FORMAT SERDE
   'org.apache.hadoop.hive.contrib.serde2.MultiDelimitSerDe'
 WITH SERDEPROPERTIES (
@@ -12,4 +12,4 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT
   'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
 LOCATION
-  '/data/hive/ratings.dat';
+  '/rhea/hive/data/rating';
