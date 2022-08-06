@@ -11,6 +11,7 @@
     <modules>
         <module>mapreduce_operate</module>
         <module>hbase_operate</module>
+        <module>hive_operate</module>
     </modules>
     <repositories>
         <repository>
